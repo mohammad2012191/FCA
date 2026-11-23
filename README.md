@@ -15,7 +15,7 @@
 ---
 
 ## Highlights
-- **Grid probing is attention in disguise.** Grid probing (Periscope on text, GridProbe on video, AnswerMap on images) asks a frozen model the same question about short local and strided spans of the input. Each probe only decides which part of the input the question may attend to, which is what an attention mask does. FCA runs that same pattern inside the attention layers of the model.
+- **Grid probing is attention in disguise.** Grid probing ([Periscope](https://github.com/mohammad2012191/Periscope) on text, [GridProbe](https://github.com/mohammad2012191/GridProbe) on video, [AnswerMap](https://github.com/sanataff/AnswerMap) on images) asks a frozen model the same question about short local and strided spans of the input. Each probe only decides which part of the input the question may attend to, which is what an attention mask does. FCA runs that same pattern inside the attention layers of the model.
 - **One encoding, reused.** FCA encodes the input once into a key-value store and reads all 2K spans as masked sequences in one batched forward. A later question about the same input reuses the store, so it costs a fraction of the first.
 - **Accuracy and reach of grid probing at a fraction of its cost.** FCA matches grid probing on long video, long text and image grounding, gains about 10 points over the single pass on long video and 9 to 14 points on long novels, and answers a later question in as little as a tenth of the time of grid probing.
 - **Beyond the context window.** A stair position schedule keeps every span inside the trained position range, so FCA finds needles in videos of over a thousand frames and in texts four times the length of the window.
@@ -242,13 +242,6 @@ All in `fca_text.py`, class `LM`:
 | Direct and select read-outs | `_readouts`, `select` |
 | New input as new rows of the grid | `conv_append`, `fca_append` |
 
----
-
-## Notes
-- **Training-free.** No fine-tuning and no adapter weights. The same checkpoint serves every read.
-- **Open weights.** FCA reads the attention layers of the model, so it needs a model with open weights. For a model behind an API, use grid probing ([Periscope](https://github.com/mohammad2012191/Periscope), [GridProbe](https://github.com/mohammad2012191/GridProbe)).
-- **Memory.** FCA keeps the encoding of the whole input for later questions. On long inputs the store moves to host memory on its own.
-- **Determinism.** All decoding is greedy.
 
 ---
 
@@ -275,8 +268,3 @@ If you use FCA in your research, please cite:
 }
 ```
 
-## Acknowledgments
-We are grateful to the KAUST Academy for its generous support, and especially to Prof. Sultan Albarakati, who made this work possible. For computer time, this research used Ibex managed by the Supercomputing Core Laboratory at King Abdullah University of Science & Technology (KAUST) in Thuwal, Saudi Arabia.
-
-## License
-MIT, see [LICENSE](LICENSE).
