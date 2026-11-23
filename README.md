@@ -255,7 +255,7 @@ All in `fca_text.py`, class `LM`:
 ## Related work from our group
 - [Periscope](https://github.com/mohammad2012191/Periscope): grid probing for long text.
 - [GridProbe](https://github.com/mohammad2012191/GridProbe): grid probing for long video.
-- AnswerMap: grid probing for spatial interpretability of images.
+- [AnswerMap](https://github.com/sanataff/AnswerMap): grid probing for spatial interpretability of images.
 
 ---
 
