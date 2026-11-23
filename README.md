@@ -1,5 +1,5 @@
 # Factorized Context Attention: From Emulated to Native Grid Probing
-**Authors:** Mohamed Eltahir, Manar Eyad\*, Yara Alzahrani\*, Fatimah Albesher\*, Duaa M. Tahir, Tanveer Hussain and Naeemullah Khan. (\*equal contribution)
+**Authors:** Mohamed Eltahir, Manar Eyad, Yara Alzahrani, Fatimah Albesher, Duaa M. Tahir, Tanveer Hussain and Naeemullah Khan. 
 
 <div align="center">
 
