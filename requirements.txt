@@ -1,0 +1,8 @@
+torch>=2.4
+transformers>=4.57
+datasets
+numpy
+flash-attn
+pillow
+decord
+qwen-vl-utils
