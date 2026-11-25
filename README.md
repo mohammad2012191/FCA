@@ -3,7 +3,7 @@
 
 <div align="center">
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2611.32423-b31b1b)](https://arxiv.org/abs/2611.32423)
 
 </div>
 
@@ -257,14 +257,14 @@ All in `fca_text.py`, class `LM`:
 If you use FCA in your research, please cite:
 
 ```bibtex
-@misc{eltahir2026fca,
-      title={Factorized Context Attention: From Emulated to Native Grid Probing},
+@misc{eltahir2026factorizedcontextattentionemulated,
+      title={Factorized Context Attention: From Emulated to Native Grid Probing}, 
       author={Mohamed Eltahir and Manar Eyad and Yara Alzahrani and Fatimah Albesher and Duaa M. Tahir and Tanveer Hussain and Naeemullah Khan},
       year={2026},
-      eprint={XXXX.XXXXX},
+      eprint={2611.32423},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/XXXX.XXXXX},
+      url={https://arxiv.org/abs/2611.32423}, 
 }
 ```
 
